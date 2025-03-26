@@ -1,0 +1,58 @@
+.header {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+
+  .headerText {
+    .nav {
+      color: var(--gray-muted);
+      font-size: 0.75rem;
+      display: flex;
+      gap: var(--spacing-xs);
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      color: var(--black-dark);
+      margin-top: var(--spacing-xs);
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+
+    button {
+      all: unset;
+      border: 1px solid var(--gray-placeholder);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+
+      i {
+        color: var(--gray-muted);
+        font-size: 15px;
+      }
+    }
+
+    .taskButton {
+      background-color: var(--blue-dark);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.6%;
+      padding: 0.5rem 1.5rem;
+      flex-shrink: 0;
+
+      i {
+        color: var(--white);
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: 5px;
+      }
+    }
+  }
+}
