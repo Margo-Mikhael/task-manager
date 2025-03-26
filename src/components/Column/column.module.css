@@ -1,4 +1,9 @@
-.column {
+.columnContainer {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+.columnContainer .column {
+  flex: 1;
   background-color: var(--gray-extra-light);
   box-shadow: 0px 2px 5px 0px hsla(227, 18%, 29%, 0.04);
   max-width: 352px;
@@ -8,11 +13,11 @@
   padding: 16px;
   margin: var(--spacing-md) var(--spacing-lg);
 }
-.column .columnTitle {
+.columnContainer .column .columnTitle {
   display: flex;
   justify-content: space-between;
 }
-.column .columnTitle h2 {
+.columnContainer .column .columnTitle h2 {
   font-family: Inter;
   font-weight: 500;
   font-size: 16px;
@@ -20,18 +25,18 @@
   letter-spacing: 0%;
   color: var(--gray-dark);
 }
-.column .columnTitle .columnButtons {
+.columnContainer .column .columnTitle .columnButtons {
   display: flex;
   gap: 15px;
 }
-.column .columnTitle .columnButtons button {
+.columnContainer .column .columnTitle .columnButtons button {
   all: unset;
   color: var(--gray-dark);
 }
-.column .columnTitle .columnButtons button i {
+.columnContainer .column .columnTitle .columnButtons button i {
   font-size: 13px;
 }
-.column .taskList {
+.columnContainer .column .taskList {
   display: flex;
   flex-direction: column;
   gap: 12px;

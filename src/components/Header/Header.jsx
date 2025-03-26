@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.scss";
+import AddTaskForm from "../AddTaskForm/AddTaskForm";
 
 export default function Header() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <header className={styles.header}>
       <div className={styles.headerText}>
@@ -20,10 +23,15 @@ export default function Header() {
         <button>
           <i className="fa-solid fa-ellipsis"></i>
         </button>
-        <button className={styles.taskButton}>
-          <i className="fa-solid fa-plus"></i>New Task
+        <button
+          className={styles.taskButton}
+          onClick={() => setIsFormOpen(true)}
+        >
+          <i className="fa-solid fa-plus"></i> New Task
         </button>
       </div>
+
+      {isFormOpen && <AddTaskForm onClose={() => setIsFormOpen(false)} />}
     </header>
   );
 }

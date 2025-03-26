@@ -5,28 +5,80 @@ import Taskcard from "../Taskcard/Taskcard";
 export default function Column({ title, tasks }) {
   return (
     <>
-      <div className={styles.column}>
-        {/* Title elements */}
-        <div className={styles.columnTitle}>
-          <h2>in Progress{title}</h2>
+      <div className={styles.columnContainer}>
+        <div className={styles.column}>
+          {/* Title elements */}
+          <div className={styles.columnTitle}>
+            <h2>in Progress{title}</h2>
 
-          <div className={styles.columnButtons}>
-            <button>
-              <i className="fa-solid fa-plus"></i>
-            </button>
-            <button>
-              <i className="fa-solid fa-ellipsis"></i>
-            </button>
+            <div className={styles.columnButtons}>
+              <button>
+                <i className="fa-solid fa-plus"></i>
+              </button>
+              <button>
+                <i className="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+          </div>
+
+          {/* Tasks */}
+          <div className={styles.taskList}>
+            {tasks?.map((task) => (
+              <Taskcard key={task.id} task={task} />
+            ))}
           </div>
         </div>
 
-        {/* Tasks */}
-        <div className={styles.taskList}>
-          {tasks?.map((task) => (
-            <Taskcard key={task.id} task={task} />
-          ))}
+        {/* To do column */}
+        <div className={styles.column}>
+          {/* Title elements */}
+          <div className={styles.columnTitle}>
+            <h2>in Progress{title}</h2>
+
+            <div className={styles.columnButtons}>
+              <button>
+                <i className="fa-solid fa-plus"></i>
+              </button>
+              <button>
+                <i className="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+          </div>
+
+          {/* Tasks */}
+          <div className={styles.taskList}>
+            {tasks?.map((task) => (
+              <Taskcard key={task.id} task={task} />
+            ))}
+          </div>
         </div>
+
+        {/* In Progress column */}
+
+        <div className={styles.column}>
+          {/* Title elements */}
+          <div className={styles.columnTitle}>
+            <h2>in Progress{title}</h2>
+
+            <div className={styles.columnButtons}>
+              <button>
+                <i className="fa-solid fa-plus"></i>
+              </button>
+              <button>
+                <i className="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+          </div>
+
+          {/* Tasks */}
+          <div className={styles.taskList}>
+            {tasks?.map((task) => (
+              <Taskcard key={task.id} task={task} />
+            ))}
+          </div>
+        </div>  
       </div>
     </>
   );
 }
+ 
