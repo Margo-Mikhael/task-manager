@@ -29,6 +29,9 @@ export default function AddTaskForm({ onClose }) {
         />
         {/* Tag */}
         <select value={tag} onChange={(e) => setTag(e.target.value)}>
+          <option value="" disabled>
+            Select a Tag
+          </option>
           <option value="Design System">Design System</option>
           <option value="Feedback">Feedback</option>
           <option value="Bug">Bug</option>

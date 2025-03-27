@@ -21,7 +21,7 @@
 .formContainer h2 {
   margin-bottom: 15px;
   font-size: 1.5rem;
-  color: var(--gray-dark);
+  color: var(--black-dark);
 }
 .formContainer input,
 .formContainer select,

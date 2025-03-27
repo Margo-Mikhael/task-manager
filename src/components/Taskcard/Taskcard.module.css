@@ -1,0 +1,58 @@
+.taskCard {
+  background: white;
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.3s ease;
+}
+.taskCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tag {
+  background: var(--blue-light);
+  color: var(--blue-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black-dark);
+  margin: 0;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--gray-dark);
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--gray-dark);
+}
+.footer .meta {
+  display: flex;
+  gap: 8px;
+}
+.footer .actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.footer .actions i {
+  color: var(--red-primary);
+  font-size: 0.875rem;
+}/*# sourceMappingURL=Taskcard.module.css.map */

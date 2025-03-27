@@ -9,7 +9,7 @@ export default function Column({ title, tasks }) {
         <div className={styles.column}>
           {/* Title elements */}
           <div className={styles.columnTitle}>
-            <h2>in Progress{title}</h2>
+            <h2>Backlog{title}</h2>
 
             <div className={styles.columnButtons}>
               <button>
@@ -33,7 +33,7 @@ export default function Column({ title, tasks }) {
         <div className={styles.column}>
           {/* Title elements */}
           <div className={styles.columnTitle}>
-            <h2>in Progress{title}</h2>
+            <h2>To do{title}</h2>
 
             <div className={styles.columnButtons}>
               <button>
@@ -76,9 +76,8 @@ export default function Column({ title, tasks }) {
               <Taskcard key={task.id} task={task} />
             ))}
           </div>
-        </div>  
+        </div>
       </div>
     </>
   );
 }
- 
