@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import AddTaskForm from "../AddTaskForm/AddTaskForm";
 
-export default function Header() {
+export default function Header({ addTask }) {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
@@ -11,7 +11,7 @@ export default function Header() {
         <nav className={styles.nav}>
           <span>Projects</span>&gt;
           <span>International</span>&gt;
-          <span>Product Web</span>
+          <span className={styles.selectedNav}>Product Web</span>
         </nav>
         <h1>My Tasks</h1>
       </div>
@@ -31,7 +31,9 @@ export default function Header() {
         </button>
       </div>
 
-      {isFormOpen && <AddTaskForm onClose={() => setIsFormOpen(false)} />}
+      {isFormOpen && (
+        <AddTaskForm onClose={() => setIsFormOpen(false)} onSubmit={addTask} />
+      )}
     </header>
   );
 }

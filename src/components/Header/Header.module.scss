@@ -11,6 +11,10 @@
       font-size: 0.75rem;
       display: flex;
       gap: var(--spacing-xs);
+
+      .selectedNav {
+        color: var(--black-light);
+      }
     }
 
     h1 {
@@ -46,6 +50,11 @@
       letter-spacing: -0.6%;
       padding: 0.5rem 1.5rem;
       flex-shrink: 0;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: var(--blue-primary);
+      }
 
       i {
         color: var(--white);

@@ -10,7 +10,7 @@ export default function Column({ title, tasks }) {
           {/* Title elements */}
           <div className={styles.columnTitle}>
             <h2>Backlog{title}</h2>
-
+ 
             <div className={styles.columnButtons}>
               <button>
                 <i className="fa-solid fa-plus"></i>

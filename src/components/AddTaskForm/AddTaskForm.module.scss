@@ -55,6 +55,7 @@
       font-size: 1rem;
       border-radius: 5px;
       transition: 0.3s;
+      width: 70px;
 
       &.cancelButton {
         background: var(--gray-light);
@@ -66,11 +67,11 @@
       }
 
       &.addButton {
-        background: var(--blue-primary);
+        background: var(--blue-dark);
         color: white;
 
         &:hover {
-          background: var(--black-dark);
+          background: var(--blue-primary);
         }
       }
     }

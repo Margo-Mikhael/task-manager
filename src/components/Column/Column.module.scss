@@ -5,17 +5,18 @@
     flex: 1;
     background-color: var(--gray-extra-light);
     box-shadow: 0px 2px 5px 0px hsla(227, 18%, 29%, 0.04);
+    min-height: 200px;
     max-width: 352px;
-    max-height: 530px;
     gap: 16px;
     border-radius: 8px;
-    padding: 16px;
+    padding: 16px 8px 12px 8px;
+    // padding: 16px;
     margin: var(--spacing-md) var(--spacing-lg);
 
     .columnTitle {
       display: flex;
       justify-content: space-between;
-
+      margin-bottom: 12px;
       h2 {
         font-family: Inter;
         font-weight: 500;
